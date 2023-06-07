@@ -3,6 +3,7 @@ const row = document.createElement("div")
 const block = document.createElement("div");
 const clear = document.getElementById("clear");
 
+let sizeSelect = document.getElementById("size");
 
 row.className = "row";
 block.className = "block";
@@ -12,26 +13,24 @@ grid.addEventListener("mouseover", (e) => {
     }
 });
 
-const test = document.getElementById("test");
-test.addEventListener("mouseover", (e) => {
-    e.target.style.backgroundColor = "red";
+sizeSelect.addEventListener("change", (e) => {
+    size = sizeSelect.value;
+    clearGrid();
+    buildGrid(size);
 });
-
 
 clear.addEventListener("click", () => {
     clearGrid();
-    buildGrid(sizeX, sizeY);
+    buildGrid(size);
 });
 
-
-
-function buildGrid(sizeX, sizeY){
-    for(let x = 0; x < sizeX; x++){
+function buildGrid(size){
+    for(let x = 0; x < size; x++){
         // cloneNode(true) allows us to have multiple of the same element be appended
         row.appendChild(block.cloneNode(true));
     }
     
-    for(let y = 0; y < sizeY; y++){
+    for(let y = 0; y < size; y++){
         grid.appendChild(row.cloneNode(true));
     }
 }
@@ -41,8 +40,6 @@ function clearGrid(){
     row.replaceChildren();
 }
 
+size = sizeSelect.value;
 
-sizeY = 8;
-sizeX = 8;
-
-buildGrid(sizeX, sizeY);
+buildGrid(size);

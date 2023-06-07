@@ -1,21 +1,32 @@
 .block{
-    width: 25px;
-    height: 25px;
+    flex: auto;
+    height: 100%;
+    width: 100%;
     background-color: black;
 }
 
 .row{
     display: flex;
     flex-direction: row;
+    height: 100%;
+    width: 100%;
 }
 
 #grid{
     display: flex;
     /* justify-content: center; */
+    width: 600px;
+    height: 600px;
     align-items: center;
     flex-direction: column;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 #test{
     background-color: blue;
