@@ -2,7 +2,7 @@
     flex: auto;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: white;
 }
 
 .row{
@@ -12,6 +12,17 @@
     width: 100%;
 }
 
+.blockTransition{
+    transition: background-color 1s;
+    background-color: white;
+}
+
+
+.border{
+    border: 5px solid black;
+    border-radius: 3px;
+}
+
 #grid{
     display: flex;
     /* justify-content: center; */
@@ -19,6 +30,8 @@
     height: 600px;
     align-items: center;
     flex-direction: column;
+    border: 5px solid black;
+    border-radius: 3px;
 }
 
 body{
