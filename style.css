@@ -1,3 +1,28 @@
+@font-face{
+    font-family: retro;
+    src: url("fonts/FortrackItalic.otf")
+}
+
+body{
+    --etch-sketch-red: #E30008;
+    --my-grey: #90A6A4;
+    --my-background: rgb(244, 226, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--my-background);
+}
+
+h1{
+    color: var(--my-grey);
+    text-align: center;
+    margin: 10px 10px 0px 10px;
+    font-family: retro, Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+
 .block{
     flex: auto;
     height: 100%;
@@ -17,12 +42,6 @@
     background-color: white;
 }
 
-
-.border{
-    border: 5px solid black;
-    border-radius: 3px;
-}
-
 #grid{
     display: flex;
     /* justify-content: center; */
@@ -30,19 +49,73 @@
     height: 600px;
     align-items: center;
     flex-direction: column;
-    border: 5px solid black;
-    border-radius: 3px;
+    border: 5px solid gray;
+    border-radius: 5px;
 }
 
-body{
+button, select, input{
+    background-color: beige;
+    border: none;
+    border-radius: 5px;
+    width: 4em;
+    height: 2em;
+    /* transition: background-color 1s;
+    transition-timing-function: ease-out; */
+    margin: 0px 10px;
+}
+
+button:hover, select:hover, input:hover{
+    background-color: rgb(186, 186, 165);
+}
+
+#checkbox{
+    margin: 0px 10px 0px 0px;
+    /* margin: 0; */
+    width: 2em;
+}
+
+#controls img{
+    height: inherit;
+    width: 2em;
+    object-fit: contain;
+    margin-right: 3px;
+}
+
+
+#controls{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--my-grey);
 }
 
-#test{
-    background-color: blue;
-    width: 50px;
+#etch-a-sketch{
+    background-color: var(--etch-sketch-red);
+    padding: 0px 50px 0px 50px;
+    border-radius: 5%;
+    will-change: margin-left;
+}
+
+#knobs-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.knob{
     height: 50px;
+    width: 50px;
+    background-color: beige;
+    border: 3px dashed rgb(151, 151, 134);
+    border-radius: 50%;
+    margin: 5px;
+}
+
+#left-knob{
+    margin-left: -45px;
+}
+
+#right-knob{
+    margin-right: -45px;
 }

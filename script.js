@@ -2,6 +2,7 @@ const grid = document.getElementById("grid");
 const row = document.createElement("div")
 const block = document.createElement("div");
 const clear = document.getElementById("clear");
+const etch_a_sketch = document.getElementById("etch-a-sketch");
 
 
 let sizeSelect = document.getElementById("size");
@@ -49,7 +50,7 @@ const gridTiming = {
 
 // Make the grid shake when click is clicked
 clear.addEventListener("click", () => {
-    grid.animate(gridShake, gridTiming);
+    etch_a_sketch.animate(gridShake, gridTiming);
     clearGrid();
 });
 

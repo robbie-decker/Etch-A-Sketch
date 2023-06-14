@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ETCH A SKETCH</h1>
+    <div id="etch-a-sketch">
+        <h1>ETCH A SKETCH</h1>
         <div id="grid"></div>
-    <span>
+        <span id = "knobs-container">
+            <div class = "knob" id="left-knob"></div>
+            <div class = "knob" id="right-knob"></div>
+        </span>
+    </div>
+        <span id = controls>
         <button id="clear">Shake</button>
         <select name="size" id="size">
             <option value="8" selected>8</option>
@@ -19,7 +25,7 @@
             <option value="100">100</option>
         </select>
         <input type="color">
-        <input type="checkbox"><span>Rainbow</span>
+        <img src="images/rainbow.png" alt="Rainbow icon"><input id= "checkbox" type="checkbox">
      </span>
     <script src="script.js" defer></script>
 </body>
